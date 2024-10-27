@@ -118,6 +118,42 @@ Implement a neural network model to optimize:
 - `unit_price`
 - `price elasticity`
 
+### Key Components Of Neural Network 
+ We are using a Feedforward Neural Network (FNN), specifically a Multi-Layer Perceptron (MLP), to optimize both total_price and unit_price. Here's a breakdown of the neural network architecture and components used in the code:
+
+Key Components of the Neural Network
+Sequential Model:
+
+The neural network is built using the Sequential model from Keras, which allows you to stack layers linearly.
+Dense Layers:
+
+Input Layer: The first Dense layer specifies the number of input features (the shape is determined by X_train_total.shape[1]).
+Hidden Layers:
+- The network includes multiple hidden layers with the following configurations:
+- The first hidden layer has 64 neurons and uses the ReLU (Rectified Linear Unit) activation function.
+- The second hidden layer has 32 neurons with ReLU activation.
+- The third hidden layer has 16 neurons with ReLU activation.
+- Output Layer: A single neuron output layer without an activation function, suitable for regression tasks, as it predicts continuous values (total price or unit price).
+Dropout Layers:
+
+Dropout is used after each of the first two hidden layers, which helps prevent overfitting by randomly setting a fraction of the input units to zero during training. In your code, it is set to 20% (Dropout(0.2)).
+Loss Function and Optimizer:
+
+The model is compiled with the mean squared error (MSE) loss function, which is commonly used for regression tasks.
+The Adam optimizer is used, which is effective for training neural networks and adjusts the learning rate during training.
+Summary of the Neural Network Architecture
+The architecture can be summarized as follows:
+
+Input Layer: Number of features as inputs (varies based on the selected features).
+- Hidden Layer 1: 64 neurons, ReLU activation
+- Dropout Layer 1: 20% dropout
+- Hidden Layer 2: 32 neurons, ReLU activation
+- Dropout Layer 2: 20% dropout
+- Hidden Layer 3: 16 neurons, ReLU activation
+Output Layer: 1 neuron (for predicting total or unit price)
+Conclusion
+The neural network used in your code is a Multi-Layer Perceptron (MLP) that is well-suited for the regression tasks of optimizing total price and unit price based on various input features.
+
 The model will consider various features, including:
 - Competitive prices
 - Historical demand
