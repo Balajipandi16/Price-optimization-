@@ -1,6 +1,6 @@
 # Price-optimization-
 The objective of this project is to conducive the small startups or business to make an effective pricing strategy for their products 
-Creating a GitHub documentation for your project involves outlining the project structure, installation instructions, usage, and additional sections such as contributions and licensing. Below is a template for your GitHub documentation, which you can customize further based on your specific project details.
+
 
 ### Project Title: **Demand and Pricing Optimization for E-commerce Products**
 
